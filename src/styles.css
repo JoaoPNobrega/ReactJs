@@ -1,0 +1,130 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a1a;
+  background-color: #f5f5f5;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.section-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.section-card h1,
+.section-card h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.video-wrapper {
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+  flex: 1;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: none;
+  border-radius: 12px;
+}
+
+.gallery-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.gallery-item {
+  background: linear-gradient(135deg, #e0f2ff, #f8e8ff);
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rates-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rates-header img {
+  width: 48px;
+  height: 48px;
+}
+
+.rates-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rates-table th,
+.rates-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.rates-table tbody tr.old-rate {
+  color: #dc2626;
+}
+
+.rates-table tbody tr.recent-rate {
+  color: #15803d;
+}
+
+.error-message {
+  color: #b91c1c;
+  text-align: center;
+}
+
+.text-scroll {
+  margin-top: 1rem;
+  padding-right: 0.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.text-scroll p {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .section-card {
+    min-height: 360px;
+  }
+
+  .video-wrapper iframe {
+    min-height: 220px;
+  }
+}
